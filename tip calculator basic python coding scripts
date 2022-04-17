@@ -4,7 +4,7 @@
 net_bill =input("Bill: ")
 net_bill = net_bill.replace("₹","")
 net_bill = float(net_bill)
-GST = .18                      												 #18% GST by INDIAN GOVT.
+GST = .18                      							 #18% GST by INDIAN GOVT.
 tax_amt = net_bill * GST
 gross_amt = net_bill + tax_amt
 tip = input('do you want to give some tip? ')

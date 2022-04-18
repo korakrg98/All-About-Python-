@@ -4,16 +4,18 @@
 net_bill =input("Bill: ")
 net_bill = net_bill.replace("₹","")
 net_bill = float(net_bill)
-GST = .18                      							 #18% GST by INDIAN GOVT.
+GST = .18                      							   	#18% GST by INDIAN GOVT.
 tax_amt = net_bill * GST
 gross_amt = net_bill + tax_amt
 tip = input('do you want to give some tip? ')
-if tip == "yes":
-  tip_amt = int(input('enter your tip percent according to your bill '))
-  tip_amt = net_bill * tip_amt/100
-  total_amt = gross_amt + tip_amt
-  print(f'your total bill is ₹{total_amt:.2f}')
+if tip == "yes" or tip =="y" or tip == "Yes" or tip == "Y" or tip == "YES":
+	tip_amt = int(input('enter your tip percent according to your choice '))
+	tip_amt = net_bill * tip_amt/100
+	total_amt = gross_amt + tip_amt
+	print(f'your total bill is ₹{total_amt:.2f}')
+	print(f'your tip amount is ₹{tip_amt:.0f}')
+	print(f'your tax amount is ₹{tax_amt:.2f}')
 else :
 	print(f'your total bill is ₹{gross_amt:.2f}')
-print(f'your tax amout is ₹{tax_amt:.2f}')
+	print(f'your tax amount is ₹{tax_amt:.2f}')
 	

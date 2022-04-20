@@ -1,0 +1,32 @@
+# Write a program that prints the numbers from 1 to 100.
+# But for multiples of three print "Fizz" instead of the number
+# and for the multiples of five print "Buzz".
+# For numbers that are multiples of both three and five print "FizzBuzz".
+
+
+
+for numbers in range(1,101):
+	
+	if numbers %3 == 0 and numbers %5 != 0:
+		print("Fizz")
+	elif numbers %5 == 0 and numbers %3 != 0:
+		print( "Buzz"  )
+	elif numbers %3 == 0 and numbers %5 == 0:
+		print("FizzBuzz")
+
+	else :
+		print(numbers)
+
+
+##################################
+
+#Another Way
+for numbers in range(1,101):
+ 	if numbers %15 == 0:                 #common factor of 3 & 5
+ 		print("FizzBuzz")
+ 	elif numbers %3 == 0:
+ 		print("Fizz")
+ 	elif numbers %5 == 0:
+ 		print("Buzz")
+ 	else :
+ 		print(numbers)
